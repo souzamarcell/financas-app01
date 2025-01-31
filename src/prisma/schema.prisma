@@ -1,0 +1,8 @@
+model Transaction {
+  id        String  @id @default(uuid())
+  type      String  // 'entrada' ou 'saida'
+  amount    Decimal
+  category  String
+  date      DateTime @default(now())
+  createdAt DateTime @default(now())
+}
